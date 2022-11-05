@@ -4,9 +4,9 @@
 #include <algorithm>
 #include <iostream>
 
-template <typename T> typename T::iterator easyfind(T container, int num)
+template <class T> typename T::iterator easyfind(T container, int num)
 {
-	typename T::iterator iter = std::find(container.begin(), container.end(), num);
+	class T::iterator iter = std::find(container.begin(), container.end(), num);
 	if (iter == container.end())
 		throw std::logic_error("no such data.");
 	else

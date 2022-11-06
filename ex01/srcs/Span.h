@@ -26,7 +26,7 @@ public:
 	{
 		if (size < 0)
 			throw std::logic_error("invalid size");
-		if ((max_ - (unsigned int)array_.size()) < (unsigned int)size)//std::distance(begin, end))
+		if ((max_ - (unsigned int)array_.size()) < (unsigned int)size)
 			throw std::logic_error("vector size error");
 		array_.insert(begin, size, num);
 	}

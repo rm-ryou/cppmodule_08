@@ -41,7 +41,7 @@ int	main()
 	try {
 		Span sp = Span(2000);
 
-		sp.addNumber(sp.begin(), sp.end() + 1000, 50);
+		sp.addNumber(sp.begin(), 1000, 50);
 
 		for (std::vector<int>::const_iterator iter = sp.begin(); iter != sp.end(); iter++)
 			std::cout << *iter << " ";
@@ -52,7 +52,7 @@ int	main()
 	try {
 		Span sp = Span(2000);
 
-		sp.addNumber(sp.begin(), sp.end() - 100, 50);
+		sp.addNumber(sp.begin(), -100, 50);
 
 		for (std::vector<int>::const_iterator iter = sp.begin(); iter != sp.end(); iter++)
 			std::cout << *iter << " ";
@@ -63,7 +63,7 @@ int	main()
 	try {
 		Span sp = Span(20);
 
-		sp.addNumber(sp.begin(), sp.end() + 100, 50);
+		sp.addNumber(sp.begin(), 100, 50);
 
 		for (std::vector<int>::const_iterator iter = sp.begin(); iter != sp.end(); iter++)
 			std::cout << *iter << " ";

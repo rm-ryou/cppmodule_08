@@ -22,13 +22,13 @@ public:
 	int		shortestSpan();
 	int		longestSpan();
 
-	template<class T> void	addNumber(T begin, T end, int num)
+	template<class T> void	addNumber(T begin, int size, int num)
 	{
-		if ((max_ - (unsigned int)array_.size()) < std::distance(begin, end))
-			throw std::logic_error("error");
-		if (std::distance(begin, end) < 0)
-			throw std::logic_error("invalid number");
-		array_.insert(begin, std::distance(begin, end), num);
+		if (size < 0)
+			throw std::logic_error("invalid size");
+		if ((max_ - (unsigned int)array_.size()) < (unsigned int)size)//std::distance(begin, end))
+			throw std::logic_error("vector size error");
+		array_.insert(begin, size, num);
 	}
 	std::vector<int>::iterator begin();
 	std::vector<int>::iterator end();

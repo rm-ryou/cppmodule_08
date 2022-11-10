@@ -22,7 +22,7 @@ public:
 	int		shortestSpan();
 	int		longestSpan();
 
-	template<class T> void	addNumber(T begin, int size, int num)
+	template<typename T> void	addNumber(T begin, int size, int num)
 	{
 		if (size < 0)
 			throw std::logic_error("invalid size");
